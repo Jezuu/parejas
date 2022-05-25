@@ -1,0 +1,151 @@
+html {
+    background: url('../images/futurama-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    color: white;
+}
+
+table {
+    margin-top: 10px;
+}
+
+button {
+    padding: 0 !important;
+}
+
+img {
+    width:250px;
+    height: 155px;
+    cursor: pointer;
+}
+
+.content {
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 140px;
+    z-index: 9998;
+    position: relative;
+}
+
+.back {
+    display: none;
+    image-rendering: pixelated;
+}
+
+.vela {
+    background: #000000b5;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+.healt {
+    text-align: center;
+}
+
+.healt span {
+    display: inline-flex;
+    border-radius: 15px;
+    padding: 5px;
+    background: #f0f8ff47;
+    width: 132px;
+    height: 44px;
+}
+.healt span img {
+    cursor: default;
+    width: 44px;
+    height: 44px;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    opacity: 0;
+    display: none;
+}
+
+.overlay:target {
+    opacity: 1;
+}
+
+.popup {
+    margin: 165px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 120px;
+}
+
+.popup h1 p {
+    margin-block-start: 0em;
+    margin: 100px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    display: none;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.popup .contentPopup {
+    color: #333;
+    max-height: 30%;
+    overflow: auto;
+}
+
+.popup .contentPopup p {
+    text-align: center;
+}
+
+.popup .contentPopup .retry {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.popup .contentPopup .retry:hover {
+    background-color: #1f5821;
+}
