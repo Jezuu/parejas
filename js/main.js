@@ -129,9 +129,7 @@ function restartGame() {
 
     healts = 3;
 
-    let retryButton = document.getElementsByClassName("retry")[0];
-
-    retryButton.addEventListener('click', (event) => {
+    document.getElementsByClassName("retry")[0].addEventListener('click', (event) => {
         closePopUp();
         setImages(document.getElementsByTagName('table')[0]);
         setTimeout('hideImages()', 1000);
@@ -139,12 +137,11 @@ function restartGame() {
 
     setTimeout(() => {
 
-        let elementHealts = document.getElementsByClassName("healt")[0].children[1];
         for(let i = 0; i < healts; i++) {
             let healtImg = document.createElement("img");
             healtImg.src = "images/healt-bender.png";
             healtImg.alt = "Healt";
-            elementHealts.appendChild(healtImg);
+            document.getElementsByClassName("healt")[0].children[1].appendChild(healtImg);
         }
     }, 1000);
 }
@@ -209,8 +206,8 @@ document.addEventListener('click', (event) => {
                 selectTwo = null;
 
                 if (healts === 0) {
-                    restartGame();
                     console.log("GAME OVER");
+                    restartGame();
                     showImages();
                     setTimeout(() => {
                         openPopUp();
@@ -225,4 +222,14 @@ document.addEventListener('click', (event) => {
 window.addEventListener('load', () => {
     setImages(document.getElementsByTagName('table')[0]);
     setTimeout('hideImages()', 1000);
+
+    setTimeout(() => {
+
+        for(let i = 0; i < healts; i++) {
+            let healtImg = document.createElement("img");
+            healtImg.src = "images/healt-bender.png";
+            healtImg.alt = "Healt";
+            document.getElementsByClassName("healt")[0].children[1].appendChild(healtImg);
+        }
+    }, 1000);
 });
